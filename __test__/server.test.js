@@ -2,9 +2,7 @@
 const { app } = require('../src/server'); // destructing assignment 
 const supertest = require('supertest');
 const mockRequest = supertest(app);
-// console.log('************************************');
-// console.log(mockRequest);
-// console.log('************************************');
+
 
 const { db } = require('../src/models/index');
 
@@ -45,7 +43,7 @@ describe('Web server', () => {
  
  //test update a recrod   
     test('can update a record', async () => {
-        const response = await mockRequest.put('/food/6');
+        const response = await mockRequest.put('/food/1');
         expect(response.status).toBe(201);
     });
     // test if can delete a food

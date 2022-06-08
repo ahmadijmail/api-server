@@ -11,7 +11,7 @@ class Collection {
 
             let newRecord = await this.model.create(obj);
             return newRecord;
-        } catch (error) {
+        } catch (e) {
             console.error("error in creating a new record in model ", this.model)
 
         }

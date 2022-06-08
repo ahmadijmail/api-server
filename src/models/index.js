@@ -31,15 +31,7 @@ const foodTable = food(sequelize, DataTypes);
 const clothesCollection = new Collection(clothesTable);
 const foodCollection = new Collection(foodTable);
 
-clothesTable.hasMany(foodTable, {
-  foreignKey: "category",
-  sourceKey: "id"
-});
 
-foodTable.belongsTo(clothesTable, {
-  foreignKey: "category",
-  targetKey: "id",
-});
 
 
 module.exports = {
